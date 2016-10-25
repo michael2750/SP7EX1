@@ -89,6 +89,9 @@
       <p>Everything you do, that relates to security on the client, can be tampered with, so the trick above should be seen as
         something to make the system more user friendly. <span style="text-decoration: underline">The real security is how REST (our data) is protected on the server. </span>
       </p>
+      <p>To know more about the Jason Web Tokens read <a href="https://jwt.io/introduction/">here</a>
+          Then in the browser (when logged in to this app) go to developer tools - network and grap the token (After Authorization: Baerer ...) and paste it into this <a href="https://jwt.io/">app here</a> to see the content of the token. (The data in the token is obviously not secret)
+      </p>
       <h4>Not sending the JWT for specific requests</h4>
       <p>In some cases (for example when doing Cross Origin Calls) we don not want to include the jwt-token with the request</p>
       <p>Use the skipAutherization property as sketched below, to prevent the Token from being include with a request</p>
@@ -106,7 +109,7 @@
     </uib-accordion-group>
     <uib-accordion-group heading="Adding new files">
 
-      The single most import thing to realize about this, and all other, seeds is how "wirred up".
+      The single most import thing to realize about this, and all other, seeds is how it is "wired up".
       <p>As an example, let's see what it will take to include a new view:</p>
       <p>Create a new folder for the view and create (as a minimum) an html-template and a JavaScript file with (as a minimum) the route-handling for the view. In this file provide a name as sketched below:</p>
       <p><code> angular.module('myApp.<b>nameForTheView</b>', ['ngRoute'])</code></p>
