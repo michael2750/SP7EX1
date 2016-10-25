@@ -160,13 +160,13 @@
       <p>For a better rant: <a href="http://plaintextoffenders.com/faq/devs">Plaintextoffenders</a> also has a good FAQ </p>
       <h5>Tasks</h5>
       <ul>
-        <li>Download the PasswordHash java file from the <a href="https://github.com/defuse/password-hashing/blob/master/PasswordStorage.java">Crackstation website</a></li>
+        <li>Download the PasswordStorage.java file from the <a href="https://github.com/defuse/password-hashing/blob/master/PasswordStorage.java">Crackstation website</a></li>
         <li>Put it in the security package</li>
         <li>Check that it has the right package on the top</li>
-        <li>Before persisting, call PasswordHash.createHash(password);</li>
+        <li>Before persisting, call PasswordStorage.createHash(password);</li>
         <li>Store the String you get in return</li>
         <li>Whenever a user tries to log in, evaluate the password sent with the hashed and salted one stored in the database by issuring: </li>
-        <li>PasswordHash.validatePassword(password, wholeHash)</li>
+        <li>PasswordStorage.validatePassword(password, wholeHash)</li>
       </ul>
       <h4>Important, commit and push to your own repository and use THIS VERSION, with a database for the rest of the semester</h4>
       <h3>Add another role</h3>
